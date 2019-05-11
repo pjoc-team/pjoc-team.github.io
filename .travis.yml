@@ -1,0 +1,25 @@
+language: shell
+services:
+- docker
+sudo: required
+branches:
+  only:
+  - master
+before_install:
+- openssl aes-256-cbc -K $encrypted_12c8071d2874_key -iv $encrypted_12c8071d2874_iv
+  -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod +x *.sh
+install:
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+- git config --global user.name "blademainer"
+- git config --global user.email "blademainer@gmail.com"
+- sed -i "s/{{GH_TOKEN}}/${GH_TOKEN}/g" push.sh
+- "./mkdocs-build.sh"
+- sudo chown -R travis public
+- ./push.sh
+env:
+  global:
+    secure: mipx9l3d9jvKVSkr0VLpzFdc9713vO33TyV83hhNkw2GiS+PmyktMxrpR4VGslIZrCVi/nn04RhB3ZECRQIBl7JQ2XaBliVeoJlHScyn01jylYsY0BCXPL4a5RIZMXIufkQqmCr9jJ7IsDnQmSQOffJQngMWAuAg/Ko4eWjyOiPuWbhBcwqTdxd/rrG135mgFgotcHJ7V9q2X52eWWAPbZjjWe0bxLmROSoDopUeTPEmr3aJsFeR81Vc8cBsyGMVi/WKWbuapLfcBT30NZatlnPQaXbpYFEWHbqCbEl1xEo0n7b3S8sdxHvKUsPCaAhCNUlDvkPbJmunnsXpFW5bqbCxUAENkmh0D7xF6UX8sgkNeYjaa3soTpUj1Eni2gsGp27Qb8WF7/P+8ewyKD1y8X9cNq204G8zNU2BbDumqzKd9eNESPEHvjA1FXW/ngAMwD5tdhoZo2j7JMDUzd4MwKVrVgeJd7dvGxAVTUDpjvzMP5VIX/tYgLDW5T9ogluizb0Nzt1kAl9lXdt8G+ox52hqfPb3F+9CuIin/q05lXqjYiYmv/6sIDvsY0PqmA1Au+lClI013zaG5iSt4lgcfWwwLGmm9CO5l+H51aEc45s6VVlNxF5StkmAN0L9pBi/WZg+L1HoH5czItCCWHw02pVz2TYVjndRgULrPm4WAKA=

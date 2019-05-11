@@ -1,0 +1,21 @@
+@startuml
+!include <cloudinsight/tomcat>
+!include <cloudinsight/jetty>
+!include <cloudinsight/kafka>
+!include <cloudinsight/java>
+!include <cloudinsight/cassandra>
+
+title Cloudinsight sprites example
+
+skinparam monochrome true
+
+rectangle "<$tomcat>\nwebapp" as webapp
+rectangle "<$jetty>\nwebapp" as springboot
+queue "<$kafka>" as kafka
+rectangle "<$java>\ndaemon" as daemon
+database "<$cassandra>" as cassandra
+
+webapp -> kafka
+kafka -> daemon
+daemon --> cassandra
+@enduml
