@@ -4,9 +4,44 @@
 服务间使用grpc进行通讯，protobuf定义见：
 [proto](https://github.com/pjoc-team/pay-proto)
 
+
+## 整体视图
+
+```plantuml
+!includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
+
+
+'LAYOUT_WITH_LEGEND
+
+title System Context diagram for Pay System
+Actor(customer, "Customer", "用户")
+
+Enterprise_Boundary("company", "Company"){
+    System_Ext(biz_system, "Business System", "Allows customers to view information about their info and orders.")
+
+    System(pay_center_system, "Pay center system", "The system for biz.")
+    System(pay_gateway_system, "Pay gateway System", "The system for user to pay or auto_renew.")
+}
+
+System_Ext(channel_system, "Channel Pay System", "The real pay system to handle users' pay orders.")
+
+Rel_D(customer, biz_system, "Show products.")
+Rel_Neighbor(customer, pay_center_system, "Pay request")
+Rel_D(pay_center_system, pay_gateway_system, "Order request")
+Rel_U(pay_gateway_system, channel_system, "Order request")
+
+Rel_Neighbor(customer, channel_system, "Pay")
+channel_system .> pay_gateway_system: Notify
+
+pay_gateway_system .> pay_center_system: Notify
+pay_center_system .> biz_system: Notify
+
+```
+
 ## 支付调用时序图
 ```plantuml
-skinparam monochrome true
+!includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
+
 
 actor User
 participant "Channel" as E
@@ -97,7 +132,10 @@ end
 
 
 ## 整体部署架构
+
 ```plantuml format="svg"
+!includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
+
 ' define
 cloud Kubernetes{
   package Core {
