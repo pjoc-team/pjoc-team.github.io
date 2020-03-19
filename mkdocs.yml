@@ -68,8 +68,10 @@ markdown_extensions:
         clickable_checkbox: false
     - pymdownx.tilde
     - sane_lists
-    - plantuml-markdown
+    #- plantuml-markdown
     - pymdownx.arithmatex
+    - plantuml_markdown:
+        server: http://www.plantuml.com/plantuml
 #    - plantuml-markdown
 #    - pymdown.plantuml
 #    - plantuml: 
