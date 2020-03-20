@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-docker run --rm -v `pwd`:/docs -w /docs pjoc/mkdocs:3d7cfb3 mkdocs build -d public
+rm -fr public
+sh prepare.sh
+docker run --rm -v "$(pwd)":/docs -w /docs pjoc/mkdocs:v0.0.13 mkdocs build -d public

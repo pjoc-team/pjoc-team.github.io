@@ -2,3 +2,4 @@ site
 public
 .idea
 *.iml
+mkdocs.yml

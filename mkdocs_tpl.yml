@@ -5,7 +5,7 @@ site_author: Blademainer
 
 repo_url: https://github.com/pjoc-team/pjoc-team.github.io
 
-copyright: Copyright &copy; 2018 <a href="http://pjoc.pub">pjoc.pub</a>.
+copyright: Copyright &copy; ${NOW_YEAR} <a href="http://pjoc.pub">pjoc.pub</a>.
 
 theme:
     name: readthedocs
@@ -13,12 +13,10 @@ theme:
     hljs_languages:
     - yaml
     - rust
-#theme:
-#    name: cinder
-#    include_sidebar: false
-#    logo: img/favicon.ico
-#    font: false
-
+    language: 'zh'
+extra:
+    search:
+        tokenizer: '[\s\-\.]+'
 nav:
     - Home: index.md
     - 1 规范:
@@ -32,16 +30,13 @@ nav:
 
 plugins:
     - search
-extra_css:
-    - css/extra.css
 extra_javascript:
-    - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js
-    - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js
-    - https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js
-    - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js
+    - https://cdn.bootcss.com/raphael/2.2.7/raphael.min.js
+    - https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js
+    - https://cdn.bootcss.com/js-sequence-diagrams/1.0.6/sequence-diagram-min.js
+    - https://cdn.bootcss.com/flowchart/1.6.5/flowchart.min.js
     - js/umlconvert.js
-    - js/lunr-chinese.min.js
-    - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
+    - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
 markdown_extensions:
     - toc
     - smarty
