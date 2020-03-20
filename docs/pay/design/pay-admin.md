@@ -1,4 +1,4 @@
-```plantuml  format="svg"
+```plantuml  format="svg_inline"
 
 sprite $bProcess jar:archimate/business-process
 sprite $aService jar:archimate/application-service

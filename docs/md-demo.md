@@ -1,7 +1,7 @@
 # Design
 ## markdown demo
 
-```plantuml format="svg"
+```plantuml format="svg_inline"
 
 !include <cloudinsight/tomcat>
 !include <cloudinsight/kafka>
@@ -23,7 +23,7 @@ daemon --> cassandra
 
 ```
 
-```plantuml
+```plantuml format="svg_inline"
 robust "DNS Resolver" as DNS
 robust "Web Browser" as WB
 concise "Web User" as WU
@@ -49,17 +49,17 @@ DNS is Processing
 DNS is Idle
 ```
 
-```plantuml format="svg" classes="uml myDiagram" alt="My super diagram placeholder" title="My super diagram"
+```plantuml format="svg_inline" classes="uml myDiagram" alt="My super diagram placeholder" title="My super diagram"
   Goofy ->  MickeyMouse: calls
   Goofy <-- MickeyMouse: responds
 ```
 
-```plantuml format="svg"
+```plantuml format="svg_inline"
   Goofy ->  MickeyMouse: calls2
   Goofy <-- MickeyMouse: responds
 ```
 
-```plantuml format="svg"
+```plantuml format="svg_inline"
 skinparam monochrome true
 autonumber 10 10 "<b>[000]"
 Bob -> Alice : Authentication Request
@@ -106,7 +106,7 @@ usecase usecase
 @enduml
 ```
 
-```plantuml
+```plantuml format="svg_inline"
 folder folder [
 This is a <b>folder
 ----

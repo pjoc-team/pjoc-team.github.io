@@ -7,7 +7,7 @@
 
 ## 整体视图
 
-```plantuml format="svg"
+```plantuml format="svg_inline"
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
 
 
@@ -39,7 +39,7 @@ pay_center_system .> biz_system: Notify
 ```
 
 ## 支付调用时序图
-```plantuml
+```plantuml format="svg_inline"
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
 
 
@@ -133,7 +133,7 @@ end
 
 ## 整体部署架构
 
-```plantuml format="svg"
+```plantuml format="svg_inline"
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
 
 ' define
