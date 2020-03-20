@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+set -x
 export NOW_YEAR="$(date +'%Y')"
 export SITE_URL="https://pjoc.pub"
 
