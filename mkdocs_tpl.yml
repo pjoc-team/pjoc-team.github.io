@@ -8,7 +8,7 @@ repo_url: https://github.com/pjoc-team/pjoc-team.github.io
 copyright: Copyright &copy; ${NOW_YEAR} <a href="${SITE_URL}">pjoc.pub</a>.
 
 theme:
-    name: readthedocs
+    name: material
     highlightjs: true
     hljs_languages:
     - yaml
