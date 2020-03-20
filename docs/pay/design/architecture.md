@@ -7,7 +7,7 @@
 
 ## 整体视图
 
-```plantuml
+```plantuml format="svg"
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
 
 

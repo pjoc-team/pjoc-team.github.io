@@ -1,7 +1,7 @@
 # Design
 ## markdown demo
 
-```plantuml
+```plantuml format="svg"
 
 !include <cloudinsight/tomcat>
 !include <cloudinsight/kafka>
