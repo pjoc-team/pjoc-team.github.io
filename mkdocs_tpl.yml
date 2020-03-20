@@ -1,11 +1,11 @@
 site_name: PJOC
-site_url: http://pjoc.pub
+site_url: ${SITE_URL}
 site_description: Distributed pay system.
 site_author: Blademainer
 
 repo_url: https://github.com/pjoc-team/pjoc-team.github.io
 
-copyright: Copyright &copy; ${NOW_YEAR} <a href="http://pjoc.pub">pjoc.pub</a>.
+copyright: Copyright &copy; ${NOW_YEAR} <a href="${SITE_URL}">pjoc.pub</a>.
 
 theme:
     name: readthedocs
