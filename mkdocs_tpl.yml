@@ -15,6 +15,15 @@ theme:
     - rust
     language: 'zh'
     custom_dir: 'theme'
+#    logo:
+#        icon: 'cloud'
+    logo: 'img/pjoc.png'
+    favicon: 'img/favicon.ico'
+    # https://squidfunk.github.io/mkdocs-material/getting-started/#color-palette
+    palette:
+        primary: 'white'
+        accent: 'white'
+
 extra:
     search:
         tokenizer: '[\s\-\.]+'
