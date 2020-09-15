@@ -1,19 +1,5 @@
-title: 支付系统-架构设计
-tags:
-  - pay
-  - design
-  - payment
-  - architecture
-category: pay
-date: 2019-02-06 14:54:04
-updated: 2020-09-08 23:31:04
----
+# 支付系统-架构设计
 
-![](/images/pasted-8.png)
-
-> 本文介绍核心支付系统的主要功能和组件。
-
-<!-- more -->
 
 <style>
 
