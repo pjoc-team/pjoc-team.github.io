@@ -9,5 +9,4 @@
 ## QQ群
 ![](img/pjoc-qq.png)
 
-# 关于
-[blademainer](https://xiongyingqi.com)
+
