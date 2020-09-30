@@ -1,3 +1,18 @@
+=== "Go"
+
+    ``` yaml
+    type A struct {
+    }
+    ```
+
+=== "Java"
+
+    ``` yaml
+    public class A {
+    }
+    ```
+
+
 ```plantuml  format="svg_inline"
 
 sprite $bProcess jar:archimate/business-process
