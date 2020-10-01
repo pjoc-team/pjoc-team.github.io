@@ -1,13 +1,13 @@
 === "Go"
 
-    ``` yaml
+    ```go
     type A struct {
     }
     ```
 
 === "Java"
 
-    ``` yaml
+    ```java
     public class A {
     }
     ```
