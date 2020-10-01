@@ -75,6 +75,8 @@ markdown_extensions:
     - sane_lists
     #- plantuml-markdown
     - pymdownx.arithmatex
+    - pymdownx.tabbed
+    - pymdownx.superfences
     - plantuml_markdown:
         server: http://www.plantuml.com/plantuml
 #    - plantuml-markdown
