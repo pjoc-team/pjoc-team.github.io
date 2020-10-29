@@ -96,7 +96,7 @@ span.yellow {
 'LAYOUT_WITH_LEGEND
 
 title System Context diagram for Pay System
-Actor(customer, "Customer", "用户")
+Actor(customer, "Customer", "User")
 
 Enterprise_Boundary("company", "Company"){
     System_Ext(biz_system, "Business System", "Allows customers to view information about their info and orders.")
