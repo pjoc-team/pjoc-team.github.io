@@ -16,7 +16,7 @@ jobs:
       - name: Build
         uses: addnab/docker-run-action@v1
         with:
-          image: docker:latest
+          image: pjoc/mkdocs:latest
           run: |
             mkdocs build -d public
       - name: Deploy to GitHub Pages
