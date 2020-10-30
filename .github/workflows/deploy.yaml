@@ -13,9 +13,14 @@ jobs:
         uses: actions/checkout@v1
       - name: shell
         run: "sh prepare.sh"
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CUSTOM_DOMAIN: pjoc.pub
+      - name: Build
+        uses: addnab/docker-run-action@v1
+        with:
+          image: docker:latest
+          run: |
+            mkdocs build -d public
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public
