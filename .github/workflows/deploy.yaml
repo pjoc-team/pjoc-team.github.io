@@ -18,8 +18,10 @@ jobs:
         with:
           image: pjoc/mkdocs:latest
           run: |
+            env
             cd ${GITHUB_WORKSPACE}
             pwd
+            find .
             mkdocs build -d public
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
