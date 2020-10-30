@@ -18,6 +18,7 @@ jobs:
         with:
           image: pjoc/mkdocs:latest
           run: |
+            find .
             env
             cd ${GITHUB_WORKSPACE}
             pwd
