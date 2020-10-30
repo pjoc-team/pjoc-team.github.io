@@ -17,12 +17,8 @@ jobs:
         uses: addnab/docker-run-action@v1
         with:
           image: pjoc/mkdocs:latest
+          options: -v ${{github.workspace}}:/docs
           run: |
-            find .
-            env
-            cd ${GITHUB_WORKSPACE}
-            pwd
-            find .
             mkdocs build -d public
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
