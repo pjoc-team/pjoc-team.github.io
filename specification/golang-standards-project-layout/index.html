@@ -19,7 +19,7 @@
     
     
       
-        <title>Standard Go Project Layout - PJOC</title>
+        <title>1.2 项目规范 - PJOC</title>
       
     
     
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Standard Go Project Layout
+              1.2 项目规范
             
           </span>
         </div>
@@ -200,10 +200,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       1 规范
@@ -226,6 +228,281 @@
     <a href="../dev-specification/" title="1.1 开发规范" class="md-nav__link">
       1.1 开发规范
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        1.2 项目规范
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="1.2 项目规范" class="md-nav__link md-nav__link--active">
+      1.2 项目规范
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    Go 目录
+  </a>
+  
+    <nav class="md-nav" aria-label="Go 目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmd" class="md-nav__link">
+    /cmd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal" class="md-nav__link">
+    /internal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pkg" class="md-nav__link">
+    /pkg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vendor" class="md-nav__link">
+    /vendor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    服务应用程序目录
+  </a>
+  
+    <nav class="md-nav" aria-label="服务应用程序目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    /api
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web 应用程序目录
+  </a>
+  
+    <nav class="md-nav" aria-label="Web 应用程序目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web_1" class="md-nav__link">
+    /web
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    通用应用目录
+  </a>
+  
+    <nav class="md-nav" aria-label="通用应用目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configs" class="md-nav__link">
+    /configs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    /init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    /scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    /build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployments" class="md-nav__link">
+    /deployments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    /test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    其他目录
+  </a>
+  
+    <nav class="md-nav" aria-label="其他目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docs" class="md-nav__link">
+    /docs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    /tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    /examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third_party" class="md-nav__link">
+    /third_party
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#githooks" class="md-nav__link">
+    /githooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assets" class="md-nav__link">
+    /assets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#website" class="md-nav__link">
+    /website
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    你不应该拥有的目录
+  </a>
+  
+    <nav class="md-nav" aria-label="你不应该拥有的目录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src" class="md-nav__link">
+    /src
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#badges" class="md-nav__link">
+    Badges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -728,6 +1005,41 @@
       
         
 <footer class="md-footer">
+    
+    <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+            
+            <a href="../dev-specification/" title="1.1 开发规范" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+                </div>
+                <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                1.1 开发规范
+              </span>
+                </div>
+            </a>
+            
+            
+            <a href="../../pay/design/biz/" title="2.1.1 需求设计" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+                <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                2.1.1 需求设计
+              </span>
+                </div>
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+                </div>
+            </a>
+            
+        </nav>
+    </div>
     
     <div class="md-footer-meta md-typeset">
         <div class="md-footer-meta__inner md-grid">
