@@ -31,6 +31,7 @@ nav:
     - Home: index.md
     - 1 规范:
       - "1.1 开发规范": specification/dev-specification.md
+      - "1.2 项目规范": specification/golang-standards-project-layout.md
     - 2 支付:
       - "2.1 设计":
         - "2.1.1 需求设计": pay/design/biz.md
