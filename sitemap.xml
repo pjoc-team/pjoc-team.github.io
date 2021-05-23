@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://pjoc.pub/</loc>
-     <lastmod>2020-11-15</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://pjoc.pub/specification/dev-specification/</loc>
-     <lastmod>2020-11-15</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://pjoc.pub/specification/golang-standards-project-layout/</loc>
-     <lastmod>2020-11-15</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://pjoc.pub/pay/summary/pay-summary/</loc>
-     <lastmod>2020-11-15</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://pjoc.pub/pay/design/biz/</loc>
-     <lastmod>2020-11-15</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://pjoc.pub/pay/design/architecture/</loc>
-     <lastmod>2020-11-15</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://pjoc.pub/pay/design/pay-admin/</loc>
-     <lastmod>2020-11-15</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://pjoc.pub/about/</loc>
-     <lastmod>2020-11-15</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
