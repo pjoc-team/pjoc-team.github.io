@@ -513,3 +513,4 @@ PayDatabase --> mysql
 #### 渠道
 - 基础目录: `/foo/bar/pay/config`
 - 每个渠道占用一个文件夹，每个渠道账户占用一个`文件`，例如微信存放在`/foo/bar/pay/config/wechat`目录下，appId: 2088123456 所在的配置信息存储在`/foo/bar/pay/config/wechat/2088123456`
+
