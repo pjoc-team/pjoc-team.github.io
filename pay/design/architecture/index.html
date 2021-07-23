@@ -562,16 +562,7 @@
   
 
           
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
+            
   
   
   
@@ -579,16 +570,16 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
-      <label class="md-nav__link" for="__nav_4">
-        3 接口
+      <label class="md-nav__link" for="__nav_3_2">
+        2.2 接口
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="3 接口" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" aria-label="2.2 接口" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
-          3 接口
+          2.2 接口
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -598,7 +589,7 @@
   
     <li class="md-nav__item">
       <a href="../../../api/pay-gateway/" class="md-nav__link">
-        3.1 支付网关
+        2.2.1 支付网关
       </a>
     </li>
   
@@ -610,8 +601,14 @@
   
     <li class="md-nav__item">
       <a href="../../../api/notify/" class="md-nav__link">
-        3.2 通知服务
+        2.2.2 通知服务
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -883,40 +880,52 @@ span.yellow {
 </ul>
 <h4 id="_8">微服务化</h4>
 <ul>
-<li>service:</li>
+<li>service:<ul>
 <li>wechat</li>
 <li>alipay</li>
 <li>unionpay</li>
-<li>rpc:</li>
+</ul>
+</li>
+<li>rpc:<ul>
 <li>grpc://wechat:8080</li>
 <li>grpc://alipay:8080</li>
 <li><a href="http://unionpay:8080">http://unionpay:8080</a></li>
+</ul>
+</li>
 </ul>
 <blockquote>
 <p>渠道微服务化，可以在国际化业务中带来更便捷的差异化部署</p>
 </blockquote>
 <h4 id="_9">面向<span class="purple">协议</span>编程</h4>
 <ul>
-<li>pay(用户触发扣款或签约)</li>
+<li>pay(用户触发扣款或签约)<ul>
 <li>method：alipay/wechat/unionpay</li>
 <li>from: WEB/MWEB/APP/SDK/BANK/SERVER</li>
 <li>type: pay/sign_pay</li>
-<li>confirm_pay(确认支付，用户二次验证)</li>
+</ul>
+</li>
+<li>confirm_pay(确认支付，用户二次验证)<ul>
 <li>from</li>
 <li>type</li>
 <li>method</li>
+</ul>
+</li>
 <li>refund(退款)</li>
 <li>transfer(转账)</li>
 </ul>
 <h4 id="_10"><span class="purple">扩展</span>&amp;配置</h4>
 <ul>
-<li>etcd配置管理</li>
+<li>etcd配置管理<ul>
 <li>高可用</li>
 <li>实时变更配置</li>
 <li>跨地域同步</li>
-<li>简化配置</li>
+</ul>
+</li>
+<li>简化配置<ul>
 <li>使用field tag生成json</li>
 <li>管理后台根据field json生成配置表单</li>
+</ul>
+</li>
 </ul>
 <p><svg alt="uml diagram" class="uml" contentScriptType="application/ecmascript" contentStyleType="text/css" height="602px" preserveAspectRatio="none" style="background:#FFFFFF;" title="" version="1.1" viewBox="0 0 740 602" width="740px" zoomAndPan="magnify"><defs /><g><text fill="#222222" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="291" x="218.25" y="12.9951">System Context diagram for Pay System</text><rect fill="#FFFFFF" height="379" style="stroke:#424242;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="503" x="7" y="217.0986" /><text fill="#222222" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="83" x="217" y="232.0938">&#171;boundary&#187;</text><text fill="#424242" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="84" x="216.5" y="250.2471">Company</text><text fill="#424242" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="12" lengthAdjust="spacing" textLength="72" x="222.5" y="265.1592">[Enterprise]</text><rect fill="#757575" height="117.7813" style="stroke:#616161;stroke-width:1.5;" width="208" x="286" y="284.0986" /><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="12" lengthAdjust="spacing" textLength="114" x="333" y="305.2373">&#171;external_system&#187;</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="154" x="313" y="322.9189">Business System</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="0" x="392" y="339.6875" /><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="180" x="300" y="355.9844">Allows customers to view</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="170" x="303" y="372.2813">information about their</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="113" x="333.5" y="388.5781">info and orders.</text><rect fill="#1976D2" height="85.1875" style="stroke:#1565C0;stroke-width:1.5;" width="192" x="23" y="300.5986" /><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="12" lengthAdjust="spacing" textLength="59" x="89.5" y="321.7373">&#171;system&#187;</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="172" x="33" y="339.4189">Pay center system</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="0" x="121" y="356.1875" /><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="139" x="51.5" y="372.4844">The system for biz.</text><rect fill="#1976D2" height="101.4844" style="stroke:#1565C0;stroke-width:1.5;" width="220" x="254" y="479.0986" /><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="12" lengthAdjust="spacing" textLength="59" x="334.5" y="500.2373">&#171;system&#187;</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="191" x="268.5" y="517.9189">Pay gateway System</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="0" x="366" y="534.6875" /><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="192" x="268" y="550.9844">The system for user to pay</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="107" x="310.5" y="567.2813">or auto_renew.</text><ellipse cx="390" cy="49.8955" fill="#1565C0" rx="8" ry="8" style="stroke:#0D47A1;stroke-width:1.5;" /><path d="M390,57.8955 L390,84.8955 M377,65.8955 L403,65.8955 M390,84.8955 L377,99.8955 M390,84.8955 L403,99.8955 " fill="none" style="stroke:#0D47A1;stroke-width:1.5;" /><text fill="#222222" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="90" x="345" y="117.2471">Customer</text><text fill="#222222" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="0" x="392" y="134.0156" /><text fill="#222222" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="31" x="376.5" y="150.3125">User</text><text fill="#222222" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="66" x="357" y="37.0938">&#171;person&#187;</text><rect fill="#757575" height="101.4844" style="stroke:#616161;stroke-width:1.5;" width="205" x="529.5" y="292.5986" /><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="12" lengthAdjust="spacing" textLength="114" x="575" y="313.7373">&#171;external_system&#187;</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="185" x="539.5" y="331.4189">Channel Pay System</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="0" x="634" y="348.1875" /><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="164" x="550" y="364.4844">The real pay system to</text><text fill="#FFFFFF" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="14" lengthAdjust="spacing" textLength="178" x="543" y="380.7813">handle users&rsquo; pay orders.</text><path d="M390,154.3406 C390,192.5796 390,240.8996 390,278.9446 " fill="none" id="customer-to-biz_system" style="stroke:#616161;stroke-width:1.0;" /><polygon fill="#616161" points="390,284.0056,394,275.0056,390,279.0056,386,275.0056,390,284.0056" style="stroke:#616161;stroke-width:1.0;" /><text fill="#616161" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="118" x="391" y="197.1655">Show products.</text><path d="M344.946,131.9946 C295.952,177.5526 217.926,250.1086 167.588,296.9176 " fill="none" id="customer-to-pay_center_system" style="stroke:#616161;stroke-width:1.0;" /><polygon fill="#616161" points="163.711,300.5226,173.0259,297.3238,167.3728,297.118,167.5785,291.4649,163.711,300.5226" style="stroke:#616161;stroke-width:1.0;" /><text fill="#616161" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="91" x="288" y="197.1655">Pay request</text><path d="M117.089,385.6306 C118.257,406.8396 123.22,431.7556 138,449.0986 C165.998,481.9526 208.438,501.2336 249.009,512.5483 " fill="none" id="pay_center_system-to-pay_gateway_system" style="stroke:#616161;stroke-width:1.0;" /><polygon fill="#616161" points="253.946,513.8889,246.3083,507.6708,249.1206,512.579,244.2124,515.3913,253.946,513.8889" style="stroke:#616161;stroke-width:1.0;" /><text fill="#616161" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="107" x="139" y="445.1655">Order request</text><path d="M311.303,479.0846 C293.852,463.4726 274.021,446.5426 255,432.0986 C235.24,417.0936 212.948,401.9796 192.215,388.6126 " fill="none" id="pay_gateway_system-to-pay_center_system" style="stroke:#616161;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="#616161" points="187.816,385.7876,193.228,394.0163,192.0233,388.4892,197.5504,387.2846,187.816,385.7876" style="stroke:#616161;stroke-width:1.0;" /><text fill="#616161" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="12" lengthAdjust="spacing" textLength="34" x="275" y="445.2373">Notify</text><path d="M593.674,397.8366 C578.996,415.7766 561.141,434.8146 542,449.0986 C521.521,464.3816 497.639,477.5646 474.143,488.5576 " fill="none" id="channel_system-backto-pay_gateway_system" style="stroke:#616161;stroke-width:1.0;" /><polygon fill="#616161" points="596.949,393.7876,588.1789,398.2694,593.8045,397.6751,594.3988,403.3006,596.949,393.7876" style="stroke:#616161;stroke-width:1.0;" /><text fill="#616161" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="107" x="560" y="445.1655">Order request</text><path d="M559.828,393.7836 C523.031,419.1166 478.266,449.9346 440.829,475.7076 " fill="none" id="channel_system-to-pay_gateway_system" style="stroke:#616161;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="#616161" points="436.301,478.8246,445.9827,477.0176,440.4199,475.9901,441.4474,470.4274,436.301,478.8246" style="stroke:#616161;stroke-width:1.0;" /><text fill="#616161" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="12" lengthAdjust="spacing" textLength="34" x="499" y="445.2373">Notify</text><path d="M435.061,118.1026 C460.901,135.3566 493.054,158.9416 518,184.0986 C549.114,215.4746 578.159,255.9716 599.144,288.1106 " fill="none" id="customer-to-channel_system" style="stroke:#616161;stroke-width:1.0;" /><polygon fill="#616161" points="601.922,292.3876,600.375,282.661,599.1988,288.1943,593.6656,287.0181,601.922,292.3876" style="stroke:#616161;stroke-width:1.0;" /><text fill="#616161" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="27" x="533" y="197.1655">Pay</text><path d="M215.308,343.0986 C236.434,343.0986 258.951,343.0986 280.551,343.0986 " fill="none" id="pay_center_system-to-biz_system" style="stroke:#616161;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="#616161" points="285.727,343.0986,276.727,339.0986,280.727,343.0986,276.727,347.0986,285.727,343.0986" style="stroke:#616161;stroke-width:1.0;" /><text fill="#616161" font-family="'Input Mono','Microsoft YaHei Mono',Menlo, Monaco, 'Courier New', monospace" font-size="12" lengthAdjust="spacing" textLength="34" x="233.5" y="337.2373">Notify</text></g></svg></p>
 <h3 id="_11">支付网关系统</h3>

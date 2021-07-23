@@ -383,16 +383,7 @@
   
 
           
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
+            
   
   
   
@@ -400,16 +391,16 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
       
-      <label class="md-nav__link" for="__nav_4">
-        3 接口
+      <label class="md-nav__link" for="__nav_3_2">
+        2.2 接口
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="3 接口" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+      <nav class="md-nav" aria-label="2.2 接口" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
-          3 接口
+          2.2 接口
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -419,7 +410,7 @@
   
     <li class="md-nav__item">
       <a href="../../../api/pay-gateway/" class="md-nav__link">
-        3.1 支付网关
+        2.2.1 支付网关
       </a>
     </li>
   
@@ -431,8 +422,14 @@
   
     <li class="md-nav__item">
       <a href="../../../api/notify/" class="md-nav__link">
-        3.2 通知服务
+        2.2.2 通知服务
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -498,18 +495,22 @@
 <h2 id="_3">规范支付流程</h2>
 <p>规范支付流程的方法有：
 - 抽象支付场景，分别定义支付流程
-  - H5支付（有些支付商会定义为WAP支付）：主要适用于手机浏览器
-  - APP支付
-  - SDK支付
-  - 网银支付
+    - H5支付（有些支付商会定义为WAP支付）：主要适用于手机浏览器
+    - APP支付
+    - SDK支付
+    - 网银支付
 - 规范接口参数，尽量简化接入方的开发
 - 提供良好的测试工具，方便调试</p>
 <h2 id="_4">安全</h2>
 <ul>
-<li>网络层</li>
+<li>网络层<ul>
 <li>使用https协议下单、回调，保证网络数据不被窃听</li>
-<li>接口协议</li>
+</ul>
+</li>
+<li>接口协议<ul>
 <li>使用签名机制防止参数传输过程中被篡改</li>
+</ul>
+</li>
 </ul>
                 
               
