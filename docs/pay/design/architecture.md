@@ -88,7 +88,7 @@ span.yellow {
   - 管理后台根据field json生成配置表单
 
 
-```plantuml
+```plantuml  format="svg_inline"
 
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
 
@@ -123,7 +123,7 @@ pay_center_system .> biz_system: Notify
 
 ### 支付网关系统
 
-```plantuml
+```plantuml format="svg_inline"
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_container.puml
 
 System_Ext(pc, "Pay center", "For biz")
@@ -172,7 +172,7 @@ cs --> ch
 
 
 ### 支付调用时序图
-```plantuml
+```plantuml format="svg_inline"
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
 
 'skinparam monochrome true
@@ -267,7 +267,7 @@ end
 
 ### 签约
 
-```plantuml
+```plantuml format="svg_inline"
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_container.puml
 
 actor "User" as u
@@ -343,7 +343,7 @@ cg --> ch --: ok
 - <span class="green">mgr</span>的心跳检测：二次开发mycat，对mgr节点状态实时检测并增删故障db
 - 应用层：去除自增主键，按机房、机器生成无冲突、有序的流水号，防止多机房数据冲突
 
-```plantuml
+```plantuml format="svg_inline"
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_container.puml
 
 Boundary(a, "idc A (Master)"){
@@ -429,7 +429,7 @@ ota <.> otb: sync
 
 ### 部署架构
 
-```plantuml
+```plantuml format="svg_inline"
 !includeurl https://raw.githubusercontent.com/blademainer/plantuml-style-c4/master/c4_component.puml
 
 ' LAYOUT_TOP_DOWN
