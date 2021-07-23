@@ -9,13 +9,14 @@
         <meta name="description" content="Distributed pay system.">
       
       
-        <link rel="canonical" href="https://pjoc.pub/pay/design/pay-admin/">
-      
       
         <meta name="author" content="Blademainer">
       
-      <link rel="shortcut icon" href="../../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+      
+        <link rel="canonical" href="https://pjoc.pub/pay/design/pay-admin/">
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.0">
     
     
       
@@ -23,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fe914879.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ba0d045b.min.css">
         
           
           
@@ -38,15 +39,17 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
     
     
       
+
+
     
     
   </head>
@@ -58,8 +61,10 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="white">
-      
   
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -71,52 +76,60 @@
     </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://pjoc.pub" title="PJOC" class="md-header-nav__button md-logo" aria-label="PJOC">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="PJOC" class="md-header__button md-logo" aria-label="PJOC" data-md-component="logo">
       
   <img src="../../../img/pjoc.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             PJOC
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               2.1.4 管理后台
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -126,12 +139,12 @@
 </div>
     
     
-      <div class="md-header-nav__source">
+      <div class="md-header__source">
         
-<a href="https://github.com/pjoc-team/pjoc-team.github.io/" title="前往 GitHub 仓库" class="md-source">
+<a href="https://github.com/pjoc-team/pjoc-team.github.io/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -151,12 +164,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://pjoc.pub" title="PJOC" class="md-nav__button md-logo" aria-label="PJOC">
+    <a href="../../.." title="PJOC" class="md-nav__button md-logo" aria-label="PJOC" data-md-component="logo">
       
   <img src="../../../img/pjoc.png" alt="logo">
 
@@ -166,10 +183,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/pjoc-team/pjoc-team.github.io/" title="前往 GitHub 仓库" class="md-source">
+<a href="https://github.com/pjoc-team/pjoc-team.github.io/" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -183,62 +200,69 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      1 规范
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="1 规范" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
         1 规范
+        <span class="md-nav__icon md-icon"></span>
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="1 规范" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          1 规范
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specification/dev-specification/" class="md-nav__link">
+        1.1 开发规范
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../specification/golang-standards-project-layout/" class="md-nav__link">
+        1.2 项目规范
+      </a>
+    </li>
+  
+
           
-
-
-  <li class="md-nav__item">
-    <a href="../../../specification/dev-specification/" title="1.1 开发规范" class="md-nav__link">
-      1.1 开发规范
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../specification/golang-standards-project-layout/" title="1.2 项目规范" class="md-nav__link">
-      1.2 项目规范
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
@@ -246,122 +270,185 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+  
+  
     
-    <label class="md-nav__link" for="nav-3">
-      2 支付
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="2 支付" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
         2 支付
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
-    
-    <label class="md-nav__link" for="nav-3-1">
-      2.1 设计
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="2.1 设计" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-1">
         <span class="md-nav__icon md-icon"></span>
-        2.1 设计
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="2 支付" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          2 支付
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        2.1 设计
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2.1 设计" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          2.1 设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../summary/pay-summary/" title="2.1.1 概述" class="md-nav__link">
-      2.1.1 概述
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../biz/" title="2.1.2 需求设计" class="md-nav__link">
-      2.1.2 需求设计
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../architecture/" title="2.1.3 架构" class="md-nav__link">
-      2.1.3 架构
-    </a>
-  </li>
-
-        
-          
-          
-          
-
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../summary/pay-summary/" class="md-nav__link">
+        2.1.1 概述
+      </a>
+    </li>
   
 
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biz/" class="md-nav__link">
+        2.1.2 需求设计
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="2.1.4 管理后台" class="md-nav__link md-nav__link--active">
-      2.1.4 管理后台
-    </a>
-    
-  </li>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        2.1.3 架构
+      </a>
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        2.1.4 管理后台
+      </a>
+      
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        3 接口
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="3 接口" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          3 接口
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/pay-gateway/" class="md-nav__link">
+        3.1 支付网关
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item">
-    <a href="../../../about/" title="About" class="md-nav__link">
-      About
-    </a>
-  </li>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/notify/" class="md-nav__link">
+        3.2 通知服务
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -372,7 +459,7 @@
             
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
@@ -387,13 +474,11 @@
 <div class="highlight"><pre><span></span><code><span class="kd">type</span> <span class="nx">A</span> <span class="kd">struct</span> <span class="p">{</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Java</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">A</span> <span class="p">{</span>
 <span class="p">}</span>
 </code></pre></div>
-
 </div>
 </div>
 <p><svg xmlns:xlink="http://www.w3.org/1999/xlink" alt="uml diagram" class="uml" contentScriptType="application/ecmascript" contentStyleType="text/css" height="630px" preserveAspectRatio="none" style="background:#FFFFFF;" title="" version="1.1" viewBox="0 0 827 630" width="827px" zoomAndPan="magnify"><defs><filter height="300%" id="f1sv8x5nf2wcc" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0" /><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" /><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3" /><feBlend in="SourceGraphic" in2="blurOut3" mode="normal" /></filter></defs><g><rect fill="#FFFFCC" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="111" x="451" y="7" /><image height="16" width="16" x="499" y="17" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGCrgH7oAqQBkAEWG/Pv/f+t/EI0uAQMwG3BikAH4DIErIAaD1FNkADZDSDIAXTPYAEIYn2ZiAMFYIARgLiEbUKR5kAMA7zW3iUrbg3kAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="461" y="44.9951">Handle claim</text><rect fill="#FFFFCC" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="167" x="37" y="126.5" /><image height="16" width="16" x="113" y="136.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGCrgH7oAqQBkAEWG/Pv/f+t/EI0uAQMwG3BikAH4DIErIAaD1FNkADZDSDIAXTPYAEIYn2ZiAMFYIARgLiEbUKR5kAMA7zW3iUrbg3kAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="47" y="164.4951">Capture Information</text><rect fill="#FFFFCC" filter="url(#f1sv8x5nf2wcc)" height="67.5938" style="stroke:#000000;stroke-width:1.5;" width="192" x="239.5" y="118" /><image height="16" width="16" x="328" y="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGCrgH7oAqQBkAEWG/Pv/f+t/EI0uAQMwG3BikAH4DIErIAaD1FNkADZDSDIAXTPYAEIYn2ZiAMFYIARgLiEbUKR5kAMA7zW3iUrbg3kAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="249.5" y="155.9951">Notify</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="172" x="249.5" y="172.292">Additional Stakeholders</text><rect fill="#FFFFCC" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="79" x="467" y="126.5" /><image height="16" width="16" x="499" y="136.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGCrgH7oAqQBkAEWG/Pv/f+t/EI0uAQMwG3BikAH4DIErIAaD1FNkADZDSDIAXTPYAEIYn2ZiAMFYIARgLiEbUKR5kAMA7zW3iUrbg3kAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="477" y="164.4951">Validate</text><rect fill="#FFFFCC" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="101" x="581" y="126.5" /><image height="16" width="16" x="624" y="136.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGCrgH7oAqQBkAEWG/Pv/f+t/EI0uAQMwG3BikAH4DIErIAaD1FNkADZDSDIAXTPYAEIYn2ZiAMFYIARgLiEbUKR5kAMA7zW3iUrbg3kAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="591" y="164.4951">Investigate</text><rect fill="#FFFFCC" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="45" x="717" y="126.5" /><image height="16" width="16" x="732" y="136.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGCrgH7oAqQBkAEWG/Pv/f+t/EI0uAQMwG3BikAH4DIErIAaD1FNkADZDSDIAXTPYAEIYn2ZiAMFYIARgLiEbUKR5kAMA7zW3iUrbg3kAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="727" y="164.4951">Pay</text><rect fill="#C2F0FF" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="85" x="237" y="246" /><image height="16" width="16" x="272" y="256" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAL0lEQVR4XmNgGAXI4B+JGAX82/r//39SMLIhJGtGN2QYGECWIcia4YaQiEcBFAAA3exLaNqtLeYAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="247" y="283.9951">Scanning</text><rect fill="#C2F0FF" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="195" x="7" y="246" /><image height="16" width="16" x="97" y="256" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAL0lEQVR4XmNgGAXI4B+JGAX82/r//39SMLIhJGtGN2QYGECWIcia4YaQiEcBFAAA3exLaNqtLeYAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="17" y="283.9951">Customer admnistration</text><rect fill="#C2F0FF" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="172" x="357.5" y="246" /><image height="16" width="16" x="436" y="256" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAL0lEQVR4XmNgGAXI4B+JGAX82/r//39SMLIhJGtGN2QYGECWIcia4YaQiEcBFAAA3exLaNqtLeYAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152" x="367.5" y="283.9951">Claims admnistration</text><rect fill="#C2F0FF" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="77" x="565" y="246" /><image height="16" width="16" x="596" y="256" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAL0lEQVR4XmNgGAXI4B+JGAX82/r//39SMLIhJGtGN2QYGECWIcia4YaQiEcBFAAA3exLaNqtLeYAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="575" y="283.9951">Printing</text><rect fill="#C2F0FF" filter="url(#f1sv8x5nf2wcc)" height="51.2969" style="stroke:#000000;stroke-width:1.5;" width="84" x="705.5" y="246" /><image height="16" width="16" x="740" y="256" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAL0lEQVR4XmNgGAXI4B+JGAX82/r//39SMLIhJGtGN2QYGECWIcia4YaQiEcBFAAA3exLaNqtLeYAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="715.5" y="283.9951">Payment</text><rect fill="#C2F0FF" filter="url(#f1sv8x5nf2wcc)" height="83.8906" style="stroke:#000000;stroke-width:1.5;" width="114" x="538.5" y="357" /><image height="16" width="16" x="588" y="367" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAU0lEQVR4XtWNQQoAIAzD9v//+D0nHgajGvUiaCGX0WZml1IPwdTi7it6ZxgROkaBlqKoNxQQOiZBznS0EwyfAx2jQEtR1BsKCB2TIGc6+kxwyANpzYhrKPLnjFMAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="548.5" y="394.9951">Document</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="548.5" y="411.292">Management</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="548.5" y="427.5889">System</text><rect fill="#C2F0FF" filter="url(#f1sv8x5nf2wcc)" height="83.8906" style="stroke:#000000;stroke-width:1.5;" width="76" x="66.5" y="357" /><image height="16" width="16" x="97" y="367" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAU0lEQVR4XtWNQQoAIAzD9v//+D0nHgajGvUiaCGX0WZml1IPwdTi7it6ZxgROkaBlqKoNxQQOiZBznS0EwyfAx2jQEtR1BsKCB2TIGc6+kxwyANpzYhrKPLnjFMAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="76.5" y="394.9951">General</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="76.5" y="411.292">CRM</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="76.5" y="427.5889">System</text><rect fill="#C2F0FF" filter="url(#f1sv8x5nf2wcc)" height="83.8906" style="stroke:#000000;stroke-width:1.5;" width="127" x="376" y="357" /><image height="16" width="16" x="432" y="367" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAU0lEQVR4XtWNQQoAIAzD9v//+D0nHgajGvUiaCGX0WZml1IPwdTi7it6ZxgROkaBlqKoNxQQOiZBznS0EwyfAx2jQEtR1BsKCB2TIGc6+kxwyANpzYhrKPLnjFMAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="386" y="394.9951">Home &amp; Away</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="386" y="411.292">Policy</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="386" y="427.5889">Administration</text><rect fill="#C2F0FF" filter="url(#f1sv8x5nf2wcc)" height="83.8906" style="stroke:#000000;stroke-width:1.5;" width="127" x="688" y="357" /><image height="16" width="16" x="744" y="367" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAU0lEQVR4XtWNQQoAIAzD9v//+D0nHgajGvUiaCGX0WZml1IPwdTi7it6ZxgROkaBlqKoNxQQOiZBznS0EwyfAx2jQEtR1BsKCB2TIGc6+kxwyANpzYhrKPLnjFMAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="698" y="394.9951">Home &amp; Away</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="698" y="411.292">Financial</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="698" y="427.5889">Administration</text><path d="M438.289,53.151 C380.453,69.95 295.365,94.988 221.5,118 C212.87,120.689 203.844,123.557 194.888,126.438 " fill="none" id="HC-backto-CI" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="450.927,49.485,444.05,47.3154,439.4023,52.829,446.2793,54.9986,450.927,49.485" style="stroke:#A80036;stroke-width:1.0;" /><path d="M459.832,65.567 C436.177,81.821 407.486,101.536 383.629,117.929 " fill="none" id="HC-backto-NAS" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="470.653,58.132,463.4426,58.2329,460.7625,64.9274,467.9729,64.8266,470.653,58.132" style="stroke:#A80036;stroke-width:1.0;" /><path d="M506.5,71.221 C506.5,89.294 506.5,110.427 506.5,126.401 " fill="none" id="HC-backto-V" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="506.5,58.132,502.5,64.132,506.5,70.132,510.5,64.132,506.5,58.132" style="stroke:#A80036;stroke-width:1.0;" /><path d="M542.443,67.287 C562.52,86.159 587.088,109.253 605.33,126.401 " fill="none" id="HC-backto-I" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="532.704,58.132,534.3362,65.156,541.4476,66.3508,539.8154,59.3269,532.704,58.132" style="stroke:#A80036;stroke-width:1.0;" /><path d="M574.68,57.984 C612.698,72.938 660.167,93.818 699.5,118 C705.329,121.583 711.222,125.948 716.628,130.313 " fill="none" id="HC-backto-P" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="562.175,53.144,566.3266,59.0401,573.3659,57.4756,569.2143,51.5795,562.175,53.144" style="stroke:#A80036;stroke-width:1.0;" /><path d="M204.064,152 C213.198,152 222.331,152 231.464,152 " fill="none" id="CI-to-NAS" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="239.49,152,231.49,149,231.49,155,239.49,152" style="stroke:#A80036;stroke-width:1.0;" /><path d="M431.688,152 C440.637,152 449.587,152 458.537,152 " fill="none" id="NAS-to-V" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="466.756,152,458.756,149,458.756,155,466.756,152" style="stroke:#A80036;stroke-width:1.0;" /><path d="M546.051,152 C554.91,152 563.769,152 572.628,152 " fill="none" id="V-to-I" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="580.765,152,572.765,149,572.765,155,580.765,152" style="stroke:#A80036;stroke-width:1.0;" /><path d="M682.125,152 C690.933,152 699.742,152 708.55,152 " fill="none" id="I-to-P" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="716.64,152,708.64,149,708.64,155,716.64,152" style="stroke:#A80036;stroke-width:1.0;" /><path d="M158.048,180.748 C184.811,200.526 220.465,226.873 246.212,245.901 " fill="none" id="CI-backto-scanning" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="153.832,177.632,158.6933,186.1975,157.8533,180.6034,163.4475,179.7634,153.832,177.632" style="stroke:#A80036;stroke-width:1.0;" /><path d="M116.419,182.971 C113.764,202.467 110.345,227.578 107.85,245.901 " fill="none" id="CI-backto-customerAdministration" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="117.146,177.632,111.9688,186.0104,116.4717,182.5863,119.8957,187.0892,117.146,177.632" style="stroke:#A80036;stroke-width:1.0;" /><path d="M369.614,190.115 C386.347,208.32 406.042,229.747 420.888,245.899 " fill="none" id="NAS-backto-claimsAdministration" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="365.871,186.043,369.017,195.3759,369.2548,189.724,374.9067,189.9618,365.871,186.043" style="stroke:#A80036;stroke-width:1.0;" /><path d="M490.698,182.473 C480.208,202.038 466.597,227.422 456.689,245.901 " fill="none" id="V-backto-claimsAdministration" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="493.293,177.632,485.5151,183.6738,490.9304,182.0386,492.5657,187.454,493.293,177.632" style="stroke:#A80036;stroke-width:1.0;" /><path d="M587.494,180.504 C555.806,200.309 513.428,226.795 482.859,245.901 " fill="none" id="I-backto-claimsAdministration" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="592.089,177.632,582.337,179.01,587.849,180.282,586.577,185.794,592.089,177.632" style="stroke:#A80036;stroke-width:1.0;" /><path d="M741.541,182.971 C742.868,202.467 744.578,227.578 745.825,245.901 " fill="none" id="P-backto-Payment" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="741.177,177.632,737.7982,186.8832,741.517,182.6204,745.7797,186.3392,741.177,177.632" style="stroke:#A80036;stroke-width:1.0;" /><path d="M530.421,181.977 C546.626,201.607 567.808,227.265 583.192,245.901 " fill="none" id="V-backto-Printing" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="526.834,177.632,529.4787,187.1191,530.017,181.4879,535.6482,182.0263,526.834,177.632" style="stroke:#A80036;stroke-width:1.0;" /><path d="M712.803,176.065 C689.515,196.185 655.822,225.295 632.013,245.866 " fill="none" id="P-backto-Printing" style="stroke:#A80036;stroke-width:1.0;" /><polygon fill="#A80036" points="716.737,172.667,707.3113,175.5227,712.953,175.9353,712.5405,181.5771,716.737,172.667" style="stroke:#A80036;stroke-width:1.0;" /><path d="M341.147,297.241 C422.501,326.109 448.094,325.514 520.5,357 C526.352,359.5446 532.353,362.3911 538.29,365.3664 " fill="none" id="scanning-backto-DMS" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="none" points="338.701,303.8,322.297,290.386,343.486,290.643,338.701,303.8" style="stroke:#A80036;stroke-width:1.0;" /><path d="M600.631,317.504 C599.811,330.375 598.921,344.3319 598.117,356.9527 " fill="none" id="Printing-backto-DMS" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="none" points="593.661,316.809,601.919,297.295,607.633,317.7,593.661,316.809" style="stroke:#A80036;stroke-width:1.0;" /><path d="M104.5,317.504 C104.5,330.375 104.5,344.3319 104.5,356.9527 " fill="none" id="customerAdministration-backto-CRM" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="none" points="97.5001,317.295,104.5,297.295,111.5,317.295,97.5001,317.295" style="stroke:#A80036;stroke-width:1.0;" /><path d="M442.066,317.504 C441.655,330.375 441.211,344.3319 440.808,356.9527 " fill="none" id="claimsAdministration-backto-HAPA" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="none" points="435.076,317.062,442.71,297.295,449.069,317.508,435.076,317.062" style="stroke:#A80036;stroke-width:1.0;" /><path d="M748.934,317.504 C749.345,330.375 749.789,344.3319 750.192,356.9527 " fill="none" id="Payment-backto-HFPA" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;" /><polygon fill="none" points="741.931,317.508,748.29,297.295,755.924,317.062,741.931,317.508" style="stroke:#A80036;stroke-width:1.0;" /><rect fill="#DDDDDD" height="154.3438" rx="5" ry="5" style="stroke:#000000;stroke-width:1.0;" width="433" x="8" y="459.8906" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="421" x="14" y="477.8857">Example from the &ldquo;Archisurance case study&rdquo; (OpenGroup).</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="14" y="494.1826">See</text><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="15" x="14" y="514.1924">=</text><image height="16" width="16" x="14" y="519.7344" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATUlEQVR4XmNgGCrgH7oAqQBkAEWG/Pv/f+t/EI0uAQMwG3BikAH4DIErIAaD1FNkADZDSDIAXTPYAEIYn2ZiAMFYIARgLiEbUKR5kAMA7zW3iUrbg3kAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="33" y="531.4326">:business process</text><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="15" x="14" y="551.4424">=</text><image height="16" width="16" x="14" y="556.9844" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAL0lEQVR4XmNgGAXI4B+JGAX82/r//39SMLIhJGtGN2QYGECWIcia4YaQiEcBFAAA3exLaNqtLeYAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="33" y="568.6826">: application service</text><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="15" x="14" y="588.6924">=</text><image height="16" width="16" x="14" y="594.2344" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAU0lEQVR4XtWNQQoAIAzD9v//+D0nHgajGvUiaCGX0WZml1IPwdTi7it6ZxgROkaBlqKoNxQQOiZBznS0EwyfAx2jQEtR1BsKCB2TIGc6+kxwyANpzYhrKPLnjFMAAAAASUVORK5CYII=" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="33" y="605.9326">: application component</text></g></svg></p>
@@ -407,6 +492,7 @@
             </article>
           </div>
         </div>
+        
       </main>
       
         
@@ -430,13 +516,13 @@
             </a>
             
             
-            <a href="../../../about/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../../../api/pay-gateway/" title="3.1 支付网关" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
                 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                About
+                3.1 支付网关
               </span>
                 </div>
                 <div class="md-flex__cell md-flex__cell--shrink">
@@ -462,19 +548,13 @@
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
-      <script src="../../../assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../../..",
-          features: [],
-          search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../../assets/javascripts/bundle.716f8af4.min.js"></script>
       
         <script src="https://cdn.bootcss.com/raphael/2.2.7/raphael.min.js"></script>
       

@@ -13,14 +13,14 @@
         <meta name="author" content="Blademainer">
       
       
-        <link rel="canonical" href="https://pjoc.pub/plan/stage1/">
+        <link rel="canonical" href="https://pjoc.pub/api/pay-gateway/">
       
       <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.0">
     
     
       
-        <title>开发计划 - PJOC</title>
+        <title>3.1 支付网关 - PJOC</title>
       
     
     
@@ -70,11 +70,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              开发计划
+              3.1 支付网关
             
           </span>
         </div>
@@ -381,12 +376,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         3 接口
@@ -402,11 +399,19 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../api/pay-gateway/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         3.1 支付网关
       </a>
+      
     </li>
   
 
@@ -416,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api/notify/" class="md-nav__link">
+      <a href="../notify/" class="md-nav__link">
         3.2 通知服务
       </a>
     </li>
@@ -451,61 +456,28 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    第一期
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/pjoc-team/pjoc-team.github.io/edit/master/docs/plan/stage1.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/pjoc-team/pjoc-team.github.io/edit/master/docs/api/pay-gateway.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="_1">开发计划</h1>
-<h2 id="_2">第一期</h2>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 架构/文档设计 10-01~10-09</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 基础服务发现组件(ConfigService) 10-10~10-12</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 支付网关(PayGateway) 10-13~10-15</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 渠道基础服务(PayChannel) 10-15~10-16</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 数据库服务(PayDatabase) 10-17~10-18</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 回调网关(CallbackGateway) 10-19~10-20</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 通知网关(NotifyGateway) 10-21~10-23</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 支付中心(PayCenter) 10-23~10-26</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 部署/调试 10-27~10-30</li>
-</ul>
+                  <h1>3.1 支付网关</h1>
+                
+                <p><link type="text/css" rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@3/swagger-ui.css"></p>
+<div id="swagger-ui">
+</div>
+<script src="https://unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js" charset="UTF-8"></script>
+<script>
+    const ui = SwaggerUIBundle({
+    url: 'https://pjoc.pub/pay-proto/apis/pay_gateway.swagger.json',
+    dom_id: '#swagger-ui',
+    })
+</script>
                 
               
               
@@ -521,6 +493,41 @@
       
         
 <footer class="md-footer">
+    
+    <div class="md-footer-nav">
+        <nav class="md-footer-nav__inner md-grid">
+            
+            <a href="../../pay/design/pay-admin/" title="2.1.4 管理后台" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+                </div>
+                <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                2.1.4 管理后台
+              </span>
+                </div>
+            </a>
+            
+            
+            <a href="../notify/" title="3.2 通知服务" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+                <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                3.2 通知服务
+              </span>
+                </div>
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+                </div>
+            </a>
+            
+        </nav>
+    </div>
     
     <div class="md-footer-meta md-typeset">
         <div class="md-footer-meta__inner md-grid">
