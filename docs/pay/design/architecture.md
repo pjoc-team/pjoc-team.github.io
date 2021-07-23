@@ -54,38 +54,38 @@ span.yellow {
 #### 微服务化
 
 - service:
-  - wechat
-  - alipay
-  - unionpay
+    - wechat
+    - alipay
+    - unionpay
 - rpc:
-  - grpc://wechat:8080
-  - grpc://alipay:8080
-  - http://unionpay:8080
+    - grpc://wechat:8080
+    - grpc://alipay:8080
+    - http://unionpay:8080
 
 > 渠道微服务化，可以在国际化业务中带来更便捷的差异化部署
 
 #### 面向<span class="purple">协议</span>编程
 
 - pay(用户触发扣款或签约)
-  - method：alipay/wechat/unionpay
-  - from: WEB/MWEB/APP/SDK/BANK/SERVER
-  - type: pay/sign_pay
+    - method：alipay/wechat/unionpay
+    - from: WEB/MWEB/APP/SDK/BANK/SERVER
+    - type: pay/sign_pay
 - confirm_pay(确认支付，用户二次验证)
-  - from
-  - type
-  - method
+    - from
+    - type
+    - method
 - refund(退款)
 - transfer(转账)
 
 #### <span class="purple">扩展</span>&配置
 
 - etcd配置管理
-  - 高可用
-  - 实时变更配置
-  - 跨地域同步
+    - 高可用
+    - 实时变更配置
+    - 跨地域同步
 - 简化配置
-  - 使用field tag生成json
-  - 管理后台根据field json生成配置表单
+    - 使用field tag生成json
+    - 管理后台根据field json生成配置表单
 
 
 ```plantuml  format="svg_inline"
