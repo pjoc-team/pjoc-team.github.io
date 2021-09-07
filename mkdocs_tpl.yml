@@ -53,6 +53,10 @@ extra_javascript:
     - https://cdn.bootcss.com/flowchart/1.6.5/flowchart.min.js
     - js/umlconvert.js
     - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
+
+extra_css:
+    - css/extra.css
+
 markdown_extensions:
     - toc
     - smarty
