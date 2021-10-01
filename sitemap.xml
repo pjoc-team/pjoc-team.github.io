@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pjoc.pub/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/about/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/md-demo/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/api/notify/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/api/pay-gateway/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/pay/design/architecture/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/pay/design/biz/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/pay/design/pay-admin/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/pay/summary/pay-summary/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/plan/stage1/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/specification/dev-specification/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pjoc.pub/specification/golang-standards-project-layout/</loc>
-         <lastmod>2021-09-07</lastmod>
+         <lastmod>2021-10-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
